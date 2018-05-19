@@ -1,5 +1,14 @@
 cmake_minimum_required(VERSION 2.8.3)
+
+include(cmake/HunterGate.cmake)
+HunterGate(
+    URL "https://github.com/ruslo/hunter/archive/v0.23.163.tar.gz"
+    SHA1 "e4a6bc5a951806f285bb7e09f845a600f7285193"
+    LOCAL
+)
+
 project(ros_environment)
+hunter_add_package(catkin)
 find_package(catkin REQUIRED)
 
 catkin_package()
